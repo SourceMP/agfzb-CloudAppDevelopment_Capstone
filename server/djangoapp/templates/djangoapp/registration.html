@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    {% load static %}
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-</head>
-    <body>
+{% extends 'base.html' %}
+
+{% block content %}
         <form action="{% url 'djangoapp:registration' %}" method="post">
             <div class="container">
                 {% csrf_token %}
@@ -29,5 +24,4 @@
                 </div>
             </div>
         </form>
-    </body>
-</html>
+{% endblock %}
